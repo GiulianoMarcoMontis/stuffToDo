@@ -1,0 +1,163 @@
+@use './styles/abstracts' as *;
+
+// views
+@use './styles/views/home';
+@use './styles/views/dashboard';
+@use './styles/views/notFound';
+
+// components
+@use './styles/components/app';
+@use './styles/components/done';
+@use './styles/components/doneContainer';
+@use './styles/components/list';
+@use './styles/components/nav';
+@use './styles/components/toDo';
+@use './styles/components/toDoContainer';
+
+// resets
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//
+:root {
+  font-family: $font-root;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// text styling
+
+.color_head {
+  padding-bottom: $padding-s;
+  color: $color_primary;
+}
+
+/*
+// Dashboard
+
+.Dashboard {
+  min-height: 100vh;
+
+  padding: $padding-l;
+  background-color: $bg-color-main;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  overflow: scroll;
+
+  // Dashboard header
+
+  &_head {
+    padding-bottom: $padding-l;
+
+    .form {
+      .label {
+        background-color: $bg-color-main;
+      }
+
+      .input {
+        padding: $padding-xs;
+        border: 0.1rem solid white;
+        border-radius: 0.5rem;
+      }
+
+      .btn {
+        margin-left: $margin-xs/2;
+        padding: $padding-xs;
+        border: 0.1rem solid white;
+        border-radius: 0.5rem;
+        text-align: center;
+      }
+
+      .btn:hover {
+        background-color: $bg-color-main;
+        color: $color_head;
+      }
+    }
+  }
+
+  // Lists container
+
+  &_lists {
+    min-height: 80vh;
+    padding-top: $padding-m;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+
+    // Individual Lists
+
+    .List {
+      min-width: 20rem;
+      border-radius: 1rem;
+      padding: $padding-m;
+      background-color: $bg-color-list;
+
+      // Tasks container
+
+      .TaskContainer {
+        .form {
+          padding-bottom: $padding-s;
+
+          .label {
+            background-color: $bg-color-main;
+          }
+
+          .input {
+            padding: $padding-xs;
+            border: 0.1rem solid white;
+            border-radius: 0.5rem;
+          }
+
+          .btn {
+            margin-left: $margin-xs/2;
+            padding: $padding-xs;
+            border: 0.1rem solid white;
+            border-radius: 0.5rem;
+            text-align: center;
+          }
+
+          .btn:hover {
+            background-color: $bg-color-main;
+            color: $color_head;
+          }
+        }
+
+        .tasks {
+          .ul {
+            min-width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 0.5rem;
+
+            list-style-type: none;
+
+            .task {
+              min-width: 100%;
+              min-height: 3rem;
+              padding: $padding-xs;
+              display: flex;
+              align-items: center;
+              background-color: rebeccapurple;
+              color: white;
+              border: 0.1rem solid white;
+              border-radius: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+*/

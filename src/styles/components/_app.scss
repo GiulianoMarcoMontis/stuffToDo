@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+.App {
+  min-height: 100vh;
+  background-color: $bg-color-main;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+}

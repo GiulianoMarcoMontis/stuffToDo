@@ -1,0 +1,9 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/spacing' as *;
+
+.List {
+  min-width: 20rem;
+  border-radius: 1rem;
+  padding: $padding-m;
+  background-color: $bg-color-list;
+}

@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.Nav {
+  min-height: 5rem;
+
+  background: $bg-color-main;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  a {
+    color: $color_secondary;
+    font-size: $font-size-m;
+    text-decoration: none;
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
