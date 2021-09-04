@@ -21,7 +21,15 @@ const appReducer = (lists, action) => {
       return lists.filter((item) => item.id !== action.payload);
     // logic for adding todo
     case ADD_TODO:
-      return lists;
+      lists.map((list) => {
+        if (list.id === action.payload.listID) {
+          return list.tasks.push({
+            id: uuid(),
+            taskText: action.payload.taskText,
+            done: false,
+          });
+        } else return list;
+      });
     // logic for toggling todo/done
     case EDIT_TASK:
       return lists;

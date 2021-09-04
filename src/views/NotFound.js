@@ -1,6 +1,6 @@
 const NotFound = () => (
-  <div>
-    <h1>Sorry, Not Found</h1>
+  <div className="NotFound">
+    <h1>Sorry, URL Not Found</h1>
   </div>
 );
 

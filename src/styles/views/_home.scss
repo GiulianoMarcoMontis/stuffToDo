@@ -4,11 +4,11 @@
   min-height: calc(100vh - 5rem);
 
   padding: $padding-l;
-  background: $bg-color-light;
+  background: $bg-color-main;
 
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 
   text-align: center;
@@ -19,7 +19,7 @@
     h1 {
       font-size: $font-size-xl;
       margin: $margin-s 0;
-      color: $color_primary;
+      color: $color-secondary;
     }
 
     h2 {
@@ -39,30 +39,37 @@
       padding: $padding-s;
       margin: $margin-l 0;
 
-      background-color: $bg-color-main;
-      color: $color_secondary;
+      background-color: $bg-color-light;
+      color: $color_primary;
 
       font-weight: 700;
-      border: none;
+      border: 0.2rem solid $bg-color-light;
       border-radius: 0.2rem;
       cursor: pointer;
+
+      &:hover {
+        background-color: $bg-color-main;
+        color: $color_secondary;
+      }
     }
   }
   &_instructions {
     width: 100%;
+    margin: $margin-l 0;
 
     h4 {
       font-size: $font-size-m;
-      margin: $margin-s 0;
-      color: $color_primary;
+      margin-bottom: $margin-l;
+      color: $color_sub-head_primary;
     }
 
     .instructions {
       list-style: none;
 
       li {
+        font-size: $font-size-s * 1.5;
         margin: $margin-s 0;
-        color: $color_normal;
+        color: $color_secondary;
       }
     }
   }

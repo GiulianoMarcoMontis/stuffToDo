@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+.NotFound {
+  text-align: center;
+  margin-top: $margin-l;
+
+  h1 {
+    font-size: $font-size-xl;
+    margin: $margin-s 0;
+    color: $color-secondary;
+  }
+}

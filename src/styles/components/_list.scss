@@ -1,8 +1,53 @@
 @use '../abstracts' as *;
 
 .List {
-  min-width: 20rem;
+  min-width: 30rem;
   border-radius: 1rem;
-  padding: $padding-m;
+
   background-color: $bg-color-list;
+
+  &_head {
+    padding: $padding-m;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    border: 0.2rem solid $color_secondary;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    color: $color_primary;
+    background-color: $bg-color-light;
+
+    &:hover {
+      color: $color_secondary;
+      background-color: $bg-color-main;
+    }
+
+    .btn_close {
+      width: 2rem;
+      height: 2rem;
+
+      padding: $padding-s/2;
+      border-radius: 1rem;
+      border: none;
+
+      font-weight: 700;
+
+      background-color: $bg-color-main;
+      color: $color_secondary;
+
+      &:hover {
+        color: $color_primary;
+        background-color: $bg-color-light;
+      }
+    }
+  }
+
+  &_body {
+    padding: $padding-m;
+    border-radius: 1rem;
+    background-color: $bg-color-list;
+  }
 }

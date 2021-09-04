@@ -40,6 +40,7 @@ const Dashboard = () => {
             name="list"
             onChange={handleChange}
             value={listTitle}
+            required
           />
           <button className="btn" type="submit">
             Add

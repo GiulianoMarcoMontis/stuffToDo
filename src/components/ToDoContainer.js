@@ -6,19 +6,20 @@ import { v4 as uuid } from 'uuid';
 import { appContext } from '../store/store.js';
 
 // actions
+import { ADD_TODO } from '../store/actions.js';
 
 // components
 
 import ToDo from './ToDo.js';
 
-const ToDoContainer = ({ todo }) => {
+const ToDoContainer = ({ todo, listID }) => {
   // Get the values we need from the Context with useContext()
-  //const { todoItems, dispatch } = useContext(appContext);
+  const { lists, dispatch } = useContext(appContext);
 
   // Control the input to always have the input value in state (onChange, value)
 
   const [taskText, setTaskText] = useState('');
-  const [tasks, setTasks] = useState([]);
+  //const [tasks, setTasks] = useState([]);
 
   const handleChange = (evt) => setTaskText(evt.target.value);
 
@@ -26,9 +27,12 @@ const ToDoContainer = ({ todo }) => {
     evt.preventDefault();
 
     // Dispatch the new todo to the store
-    // dispatch({ type: ADD_TODO, payload: todoText });
 
-    setTasks([...tasks, { id: uuid(), text: taskText, done: false }]);
+    //setTasks([...tasks, { id: uuid(), text: taskText, done: false }]);
+    dispatch({
+      type: ADD_TODO,
+      payload: { taskText: taskText, listID: listID },
+    });
     setTaskText('');
   };
 
@@ -43,17 +47,23 @@ const ToDoContainer = ({ todo }) => {
           name="tasks"
           onChange={handleChange}
           value={taskText}
+          required
         />
         <button className="btn" type="submit">
-          Add
+          Add task
         </button>
       </form>
       <div className="tasks">
-        <h3 className="color_head">TO DO</h3>
+        <h3>Things To Do:</h3>
         <ul className="ul">
-          {tasks.map((task) => {
-            console.log(task);
-            return <li className="task">{task.text}</li>;
+          {lists?.map((list) => {
+            if (list.id === listID) {
+              return list.tasks.map((task) => (
+                <li className="task" key={task.id}>
+                  {task.taskText}
+                </li>
+              ));
+            }
           })}
         </ul>
 

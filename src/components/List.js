@@ -9,7 +9,6 @@ import DoneContainer from './DoneContainer.js';
 import ToDoContainer from './ToDoContainer.js';
 
 const List = ({ id, listTitle }) => {
-  console.log(id, listTitle);
   const { lists, dispatch } = useContext(appContext);
 
   // filter todo & done
@@ -21,20 +20,20 @@ const List = ({ id, listTitle }) => {
     dispatch({ type: REMOVE_LIST, payload: id });
   };
 
+  //() => dispatch({ type: REMOVE_LIST, payload: id })
+
   return (
     <div className="List">
-      <button
-        className="btn_close"
-        onClick={() => dispatch({ type: REMOVE_LIST, payload: id })}
-      >
-        X
-      </button>
-      <div className="ListContainer_head">
-        <h1 className="color_head">{listTitle}</h1>
-        <h2 className="color_head">add tasks</h2>
+      <div className="List_head">
+        <h1>{listTitle}</h1>
+        <button className="btn_close" onClick={handleDeleteList}>
+          <span>X</span>
+        </button>
       </div>
-      <ToDoContainer todo={todoItems} />
-      {/* <DoneContainer done={doneItems} /> */}
+      <div className="List_body">
+        <ToDoContainer todo={todoItems} listID={id} />
+        {/* <DoneContainer done={doneItems} /> */}
+      </div>
     </div>
   );
 };
