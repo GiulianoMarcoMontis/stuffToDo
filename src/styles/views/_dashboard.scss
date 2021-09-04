@@ -1,23 +1,39 @@
-@use '../abstracts/colors' as *;
-@use '../abstracts/spacing' as *;
+@use '../abstracts' as *;
 
 .Dashboard {
   min-height: calc(100vh - 5rem);
 
   padding: $padding-l;
-  background-color: $bg-color-list;
+  background-color: $bg-color-main;
 
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-
-  overflow: scroll;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
 
   // Dashboard header
 
   &_head {
-    padding-bottom: $padding-l;
+    width: 100%;
+
+    text-align: center;
+
+    h1 {
+      font-size: $font-size-xl;
+      color: $color_secondary;
+      margin-bottom: $margin-m;
+    }
+
+    h2 {
+      font-size: $font-size-l;
+      color: $color_sub-head_primary;
+      margin-bottom: $margin-s;
+    }
+
+    hr {
+      margin: $margin-l;
+      border-radius: 1rem;
+    }
 
     .form {
       .label {
@@ -40,18 +56,15 @@
 
       .btn:hover {
         background-color: $bg-color-main;
-        color: $color_primary;
+        color: $color_secondary;
       }
     }
   }
 
   &_lists {
-    min-height: 80vh;
-    padding-top: $padding-m;
-
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
   }
 }

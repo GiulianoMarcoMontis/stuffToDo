@@ -8,7 +8,7 @@
 
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 
   text-align: center;
@@ -18,20 +18,34 @@
 
     h1 {
       font-size: $font-size-xl;
-      margin-bottom: $margin-s;
+      margin: $margin-s 0;
       color: $color_primary;
     }
 
     h2 {
       font-size: $font-size-s;
-      color: black;
+      margin: $margin-s 0;
+      color: $color_sub-head_primary;
     }
 
     hr {
-      margin: $margin-l;
+      margin: $margin-s 0;
 
       border-radius: 1rem;
       background-color: black;
+    }
+
+    button {
+      padding: $padding-s;
+      margin: $margin-l 0;
+
+      background-color: $bg-color-main;
+      color: $color_secondary;
+
+      font-weight: 700;
+      border: none;
+      border-radius: 0.2rem;
+      cursor: pointer;
     }
   }
   &_instructions {
@@ -39,26 +53,17 @@
 
     h4 {
       font-size: $font-size-m;
-      margin-bottom: $margin-l;
-      color: $color_sub-head_primary;
+      margin: $margin-s 0;
+      color: $color_primary;
     }
 
     .instructions {
       list-style: none;
 
       li {
-        margin-bottom: $margin-s;
-        color: $color_primary;
+        margin: $margin-s 0;
+        color: $color_normal;
       }
     }
-  }
-  button {
-    padding: $padding-s;
-    background-color: $bg-color-main;
-    color: $color_secondary;
-    font-weight: 700;
-    border: none;
-    border-radius: 0.2rem;
-    cursor: pointer;
   }
 }

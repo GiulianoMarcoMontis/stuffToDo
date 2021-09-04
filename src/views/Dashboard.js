@@ -29,8 +29,8 @@ const Dashboard = () => {
   return (
     <div className="Dashboard">
       <div className="Dashboard_head">
-        <h1 className="color_head">Dashboard</h1>
-        <h2 className="color_head">Add a list</h2>
+        <h1>Dashboard</h1>
+        <h2>Add a list</h2>
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="list" className="label"></label>
           <input
@@ -45,6 +45,7 @@ const Dashboard = () => {
             Add
           </button>
         </form>
+        <hr />
       </div>
 
       <div className="Dashboard_lists">

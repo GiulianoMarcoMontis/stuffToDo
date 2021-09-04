@@ -5,13 +5,16 @@ const Home = () => (
     <section className="Home_titles">
       <h1>StuffToDo()</h1>
       <h2>StuffToDo helps you keeping things under control</h2>
+
+      <div className="btn_callForAction">
+        <Link exact to="/dashboard">
+          <button>Start your first Dashboard</button>
+        </Link>
+      </div>
+
       <hr />
     </section>
-    <div className="btn_callForAction">
-      <Link exact to="/dashboard">
-        <button>Start your first Dashboard</button>
-      </Link>
-    </div>
+
     <section className="Home_instructions">
       <h4>
         You do not know how to use it? <br />
@@ -19,8 +22,10 @@ const Home = () => (
       </h4>
 
       <ol className="instructions">
-        <li>Structure your tasks into list in your head or a piece of paper</li>
-        <li>Give a name to your first list and click on add</li>
+        <li>
+          Structure your tasks into lists in your head or a piece of paper
+        </li>
+        <li>Give a name to your first list and add it to your dashboard</li>
         <li>Start adding some tasks to your first list</li>
         <li>All tasks are labelled as toDo</li>
         <li>
