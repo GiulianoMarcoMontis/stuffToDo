@@ -1,8 +1,11 @@
 @use '../abstracts' as *;
 
 .App {
+  min-width: 100vw;
   min-height: 100vh;
+
   background-color: $bg-color-main;
+
   display: flex;
   flex-flow: column nowrap;
   justify-content: stretch;

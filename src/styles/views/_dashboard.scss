@@ -15,13 +15,16 @@
 
   &_head {
     width: 100%;
-
     text-align: center;
 
     h1 {
       font-size: $font-size-xl;
       color: $color_secondary;
       margin-bottom: $margin-m;
+
+      @media screen and (max-width: 370px) {
+        font-size: $font-size-l;
+      }
     }
 
     h2 {

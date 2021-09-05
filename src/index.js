@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import { AppProvider } from './store/store.js';
 import { BrowserRouter } from 'react-router-dom';
 
+// provider
+import { AppProvider } from './store/store';
+
+// components
 import App from './App';
 
+// styling - sass
 import './main.scss';
 
+// the Provider passes state and dispatches to all components
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>

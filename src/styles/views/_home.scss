@@ -20,6 +20,10 @@
       font-size: $font-size-xl;
       margin: $margin-s 0;
       color: $color-secondary;
+
+      @media screen and (max-width: 420px) {
+        font-size: $font-size-l;
+      }
     }
 
     h2 {

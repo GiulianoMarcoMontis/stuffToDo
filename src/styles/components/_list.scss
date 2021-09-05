@@ -6,6 +6,14 @@
 
   background-color: $bg-color-list;
 
+  @media screen and (max-width: 500px) {
+    min-width: 25rem;
+  }
+
+  @media screen and (max-width: 420px) {
+    min-width: 20rem;
+  }
+
   &_head {
     padding: $padding-m;
 
@@ -26,21 +34,19 @@
     }
 
     .btn_close {
-      width: 2rem;
-      height: 2rem;
-
       padding: $padding-s/2;
       border-radius: 1rem;
       border: none;
 
       font-weight: 700;
 
-      background-color: $bg-color-main;
-      color: $color_secondary;
-
       &:hover {
-        color: $color_primary;
-        background-color: $bg-color-light;
+        box-shadow: 9px 9px 18px #acbac2, -9px -9px 18px #cadae4;
+      }
+
+      img {
+        width: 3rem;
+        height: auto;
       }
     }
   }

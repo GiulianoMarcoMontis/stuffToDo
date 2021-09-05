@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+
+.Task {
+  min-width: 100%;
+  min-height: 3rem;
+
+  padding: $padding-s;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $bg-color-main;
+  color: $color_secondary;
+
+  border: 0.1rem solid $color_secondary;
+  border-radius: 0.5rem;
+
+  &:hover {
+    color: $color_primary;
+    background: #bbcad3;
+    box-shadow: 9px 9px 18px #acbac2, -9px -9px 18px #cadae4;
+  }
+
+  .btn_close {
+    padding: $padding-s/2;
+    border-radius: 1rem;
+    border: none;
+
+    &:hover {
+      box-shadow: 9px 9px 18px #acbac2, -9px -9px 18px #cadae4;
+    }
+
+    img {
+      width: 3rem;
+      height: auto;
+    }
+  }
+}

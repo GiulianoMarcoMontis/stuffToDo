@@ -1,27 +1,24 @@
 import { useState, useContext } from 'react';
 
 // context
-
-import { appContext } from '../store/store.js';
+import { appContext } from '../store/store';
 
 // actions
-import { ADD_LIST, REMOVE_LIST } from '../store/actions.js';
+import { ADD_LIST } from '../store/actions';
 
 // components
 import List from '../components/List.js';
 
 const Dashboard = () => {
-  // Get the values we need from the Context with useContext()
-  const { lists, dispatch } = useContext(appContext);
+  const { appState, dispatch } = useContext(appContext);
 
+  // state for controlled form
   const [listTitle, setListTitle] = useState('');
-
   const handleChange = (evt) => setListTitle(evt.target.value);
 
+  // submit handler to dispatch listTitle to the store to be added
   const handleSubmit = (evt) => {
     evt.preventDefault();
-
-    // Dispatch the new todo to the store
     dispatch({ type: ADD_LIST, payload: listTitle });
     setListTitle('');
   };
@@ -49,11 +46,13 @@ const Dashboard = () => {
         <hr />
       </div>
 
+      {/* Render all lists added by the user. 
+          Pass the list to the list component to render details  */}
+
       <div className="Dashboard_lists">
-        {lists.map((list) => {
-          console.log(list);
-          return <List key={list.id} {...list} />;
-        })}
+        {appState.map((list) => (
+          <List key={list.listID} {...list} />
+        ))}
       </div>
     </div>
   );

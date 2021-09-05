@@ -7,12 +7,11 @@
 
 // components
 @use './styles/components/app';
-@use './styles/components/done';
-@use './styles/components/doneContainer';
+
 @use './styles/components/list';
 @use './styles/components/nav';
-@use './styles/components/toDo';
-@use './styles/components/toDoContainer';
+@use './styles/components/task';
+@use './styles/components/taskContainer';
 
 // resets
 * {
