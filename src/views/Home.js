@@ -27,11 +27,11 @@ const Home = () => (
         </li>
         <li>Give a name to your first list and add it to your dashboard</li>
         <li>Start adding some tasks to your first list</li>
-        <li>All tasks are labelled as toDo</li>
+        {/* <li>All tasks are labelled as toDo</li>
         <li>
           Once you are done with one of your tasks, click on it to label it as
           done!!
-        </li>
+        </li> */}
         <li>
           If you want to add more lists you can simply start from step one and
           add more
@@ -40,10 +40,10 @@ const Home = () => (
           If you make a mistake you can delete lists and tasks by clicking on
           the respective button
         </li>
-        <li>
+        {/* <li>
           If you simply want to move tasks from one list to another use the drag
           and drop functionality
-        </li>
+        </li> */}
       </ol>
     </section>
   </main>
